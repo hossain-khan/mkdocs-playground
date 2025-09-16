@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - '*'
 
 # Sets permissions of the GITHUB_TOKEN to allow pushing to `gh-pages` branch
 permissions:
@@ -53,9 +55,11 @@ jobs:
         run: |
           if [[ "$GITHUB_REF" == refs/tags/* ]]; then
             VERSION="${GITHUB_REF#refs/tags/}"
+            echo "Triggered by tag: $VERSION"
             mike deploy --update-aliases --push "$VERSION" latest
           else
             VERSION="$(git rev-parse --short HEAD)-SNAPSHOT"
+            echo "Triggered by branch: $GITHUB_REF, deploying snapshot version: $VERSION"
             mike deploy --update-aliases --push "$VERSION" snapshot
           fi
 

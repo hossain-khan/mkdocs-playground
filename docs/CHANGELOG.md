@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-### Changed
+### Added
+- Tagging hook for workflow
+
+## [0.2.0] - 2025-09-16
 
 ### Added
 - Enabled 'search' and 'mike' plugins in mkdocs.yml
