@@ -10,3 +10,10 @@ plugins:
 extra:
   version:
     provider: mike
+
+nav:
+  - 'Introduction': index.md
+  - 'Overview':
+    - 'CLI Setup': setup-cli.md
+    - 'CI Workflow': ci-workflow.md
+  - 'Change Log': CHANGELOG.md
