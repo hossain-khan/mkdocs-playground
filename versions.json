@@ -5,6 +5,13 @@
     "aliases": []
   },
   {
+    "version": "aec0821-SNAPSHOT",
+    "title": "aec0821-SNAPSHOT",
+    "aliases": [
+      "snapshot"
+    ]
+  },
+  {
     "version": "9648d27-SNAPSHOT",
     "title": "9648d27-SNAPSHOT",
     "aliases": []
@@ -12,9 +19,7 @@
   {
     "version": "861b532-SNAPSHOT",
     "title": "861b532-SNAPSHOT",
-    "aliases": [
-      "snapshot"
-    ]
+    "aliases": []
   },
   {
     "version": "5da4b18-SNAPSHOT",
