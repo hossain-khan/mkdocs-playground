@@ -7,6 +7,11 @@
   {
     "version": "aec0821-SNAPSHOT",
     "title": "aec0821-SNAPSHOT",
+    "aliases": []
+  },
+  {
+    "version": "8652128-SNAPSHOT",
+    "title": "8652128-SNAPSHOT",
     "aliases": [
       "snapshot"
     ]
