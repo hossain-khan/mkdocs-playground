@@ -5,7 +5,11 @@ theme:
 
 plugins:
   - search
+  # Versioned Metro docs site for each release
+  # https://github.com/jimporter/mike
   - mike
+  # https://github.com/sondregronas/mkdocs-callouts
+  - callouts
 
 extra:
   version:
