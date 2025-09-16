@@ -1,10 +1,15 @@
 [
   {
-    "version": "2f1deab-SNAPSHOT",
-    "title": "2f1deab-SNAPSHOT",
+    "version": "9648d27-SNAPSHOT",
+    "title": "9648d27-SNAPSHOT",
     "aliases": [
       "snapshot"
     ]
+  },
+  {
+    "version": "2f1deab-SNAPSHOT",
+    "title": "2f1deab-SNAPSHOT",
+    "aliases": []
   },
   {
     "version": "0.1.0",
