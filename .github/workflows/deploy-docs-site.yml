@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+# Sets permissions of the GITHUB_TOKEN to allow pushing to `gh-pages` branch
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy-docs:
     runs-on: ubuntu-latest
@@ -23,14 +29,28 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Configure Git for Mike
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch gh-pages branch
+        run: |
+          # Fetch the gh-pages branch to ensure we have the latest state
+          git fetch origin gh-pages:gh-pages || echo "gh-pages branch doesn't exist yet (first deployment)"
+
+      - name: Show current mike versions
+        run: |
+          echo "Current mike versions available:"
+          mike list || echo "No docs site versions found (likely first deployment)"
+
       - name: Build MkDocs site
         run: |
-          mkdocs build
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            VERSION="${GITHUB_REF#refs/tags/}"
+            mike deploy --update-aliases --push "$VERSION" latest
+          else
+            VERSION="$(git rev-parse --short HEAD)-SNAPSHOT"
+            mike deploy --update-aliases --push "$VERSION" snapshot
+          fi
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          publish_branch: gh-pages
-          force_orphan: true

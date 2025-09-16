@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+- Workflow now uses mike for direct versioned documentation deployment
+- Removed redundant peaceiris/actions-gh-pages step from CI
+- Improved workflow permissions for direct branch commits
+
 ## [0.1.0] - 2025-09-16
 ### Added
 - Initial MkDocs site setup
