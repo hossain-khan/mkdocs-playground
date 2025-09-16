@@ -7,13 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Changed
-- Workflow now uses mike for direct versioned documentation deployment
-- Removed redundant peaceiris/actions-gh-pages step from CI
-- Improved workflow permissions for direct branch commits
+
+### Added
+- Enabled 'search' and 'mike' plugins in mkdocs.yml
 
 ## [0.1.0] - 2025-09-16
-### Added
-- Initial MkDocs site setup
-- Material theme enabled (`mkdocs-material` 9.6.20)
-- Automated deployment to `gh-pages` via GitHub Actions
 - Versioned documentation support with `mike` 2.1.3
