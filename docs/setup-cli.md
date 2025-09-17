@@ -7,10 +7,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-## 2. Install MkDocs
+## 2. Install MkDocs and Other Dependencies
 
 ```bash
-pip install mkdocs
+pip install -r requirements.txt
 ```
 
 ## 3. Build the Documentation
