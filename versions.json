@@ -1,5 +1,12 @@
 [
   {
+    "version": "d18cb70-SNAPSHOT",
+    "title": "d18cb70-SNAPSHOT",
+    "aliases": [
+      "snapshot"
+    ]
+  },
+  {
     "version": "c06063c-SNAPSHOT",
     "title": "c06063c-SNAPSHOT",
     "aliases": []
@@ -32,9 +39,7 @@
   {
     "version": "465af8b-SNAPSHOT",
     "title": "465af8b-SNAPSHOT",
-    "aliases": [
-      "snapshot"
-    ]
+    "aliases": []
   },
   {
     "version": "377d9da-SNAPSHOT",
