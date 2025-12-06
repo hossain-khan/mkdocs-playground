@@ -1,7 +1,16 @@
 site_name: MkDocs Playground
+repo_name: MKDP
+repo_url: https://github.com/hossain-khan/mkdocs-playground
+site_url: https://hossain-khan.github.io/mkdocs-playground/
 
 theme:
   name: material
+  # https://squidfunk.github.io/mkdocs-material/upgrade/#contentaction
+  features:
+  - content.code.copy
+  - content.code.select
+  - content.action.edit
+  - content.action.view
 
 plugins:
   - search
